@@ -1,6 +1,6 @@
-import fs from 'fs';
+import { getInput } from './helpers';
 
-const input = fs.readFileSync('inputs/1', 'utf-8');
+const input = getInput(1);
 const lines = input.split('\n').map(string => Number.parseInt(string))
 const result = lines.reduce((prev, current, index, array) => {
   const lastDepth = array[index - 1];

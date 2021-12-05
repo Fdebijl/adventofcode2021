@@ -1,4 +1,4 @@
-import fs from 'fs';
+import { getInput } from './helpers';
 
 type Command = 'up' | 'forward' | 'down';
 
@@ -7,7 +7,7 @@ interface Instructions {
   steps: number;
 }
 
-const input = fs.readFileSync('inputs/2', 'utf-8');
+const input = getInput(2);
 const instructions: Instructions[] = input.split('\n').map(line => {
   return {
     command: line.split(' ')[0] as Command,

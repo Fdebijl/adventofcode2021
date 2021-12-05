@@ -1,6 +1,6 @@
-import fs from 'fs';
+import { getInput } from './helpers';
 
-const input = fs.readFileSync('inputs/1', 'utf-8');
+const input = getInput(1);
 const lines = input.split('\n').map(string => Number.parseInt(string))
 const windows = lines.map((line, index, array) => {
   if (array[index + 1] + array[index + 2]) {
