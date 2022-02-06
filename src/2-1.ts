@@ -18,7 +18,7 @@ const instructions: Instructions[] = input.split('\n').map(line => {
 let x = 0, y = 0;
 for (let i = 0; i < instructions.length; i++) {
   const instruction = instructions[i];
-  
+
   switch (instruction.command) {
     case 'down': {
       x = x + instruction.steps;

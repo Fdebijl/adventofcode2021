@@ -1,14 +1,10 @@
-import { getInput } from "./helpers";
+import { getInput, transpose } from "./helpers";
 
 type Bit = 0 | 1;
 
-const transpose = (matrix: Bit[][]): Bit[][] => {
-  return matrix[0].map((col, i) => matrix.map(row => row[i]));
-}
-
 const getMostCommonBit = (bits: Bit[]): Bit => {
   let nill = 0, one = 0;
-  bits.forEach(bit => bit === 0 ? nill++ : one++)
+  bits.forEach(bit => (bit === 0 ? nill++ : one++))
   return nill > one ? 1 : 0;
 }
 
