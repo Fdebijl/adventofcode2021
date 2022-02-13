@@ -1,4 +1,4 @@
-import { getInput } from "./helpers";
+import { getInput } from './helpers';
 
 type Vector = {
   x1: number;

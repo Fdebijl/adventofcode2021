@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node --inspect-brk -r ts-node/register",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint \"./src/**/*.ts\" --max-warnings 2"
   },
   "repository": {
     "type": "git",
@@ -14,16 +14,14 @@
   },
   "license": "ISC",
   "dependencies": {
-    "node-fetch": "2.6.6"
   },
   "devDependencies": {
     "@fdebijl/eslint-config": "1.2.0",
-    "@types/node": "16.11.11",
-    "@types/node-fetch": "2.5.12",
-    "@typescript-eslint/eslint-plugin": "5.10.2",
-    "@typescript-eslint/parser": "5.10.2",
-    "eslint": "8.8.0",
-    "ts-node": "10.4.0",
-    "typescript": "4.5.2"
+    "@types/node": "17.0.17",
+    "@typescript-eslint/eslint-plugin": "5.11.0",
+    "@typescript-eslint/parser": "5.11.0",
+    "eslint": "8.9.0",
+    "ts-node": "10.5.0",
+    "typescript": "4.5.5"
   }
 }

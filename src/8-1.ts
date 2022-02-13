@@ -12,7 +12,7 @@ const segmentCountToCharMap: { [key: number]: number | undefined } = {
 
 const input = getInput(8).split('\n');
 const output = input.reduce((sum, current) => {
-  const [ signalPatterns, outputValues ] = current.split('|');
+  const [ ,outputValues ] = current.split('|');
   const out = sum += (outputValues.split(' ').map(segmentCount => segmentCountToCharMap[segmentCount.length]).filter(Boolean)).length;
   return out;
 }, 0);

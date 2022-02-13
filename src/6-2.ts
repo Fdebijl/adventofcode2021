@@ -15,7 +15,7 @@ const setupBuckets = (initialStateCounters: number[]) => {
 
 const doTick = (fishInternalCounterBuckets: number[]): number[] => {
   // Get the count of new-born fish by removing all the zero-day fish
-  let freshFish = fishInternalCounterBuckets.shift() as number;
+  const freshFish = fishInternalCounterBuckets.shift() as number;
   // Set these fish to birth a new fish in 8 days by putting the count of zero-day fish at the end of the array
   fishInternalCounterBuckets.push(freshFish);
   // Set the fish that just gave birth to give birth again in 6 days

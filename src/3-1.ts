@@ -1,4 +1,4 @@
-import { getInput, transpose } from "./helpers";
+import { getInput, transpose } from './helpers';
 
 type Bit = 0 | 1;
 
